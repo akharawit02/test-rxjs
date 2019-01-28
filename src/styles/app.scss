@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400');
+#app {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+  color: #856E50;
+}
+
+.content-box {
+  padding-bottom: 80px;
+}
+
+.title {
+  font-weight: bold;
+  padding: 5rem 0 3.5rem 0;
+  position: relative;
+  text-align: center;
+  &-black {
+    color: #000;
+  }
+  &-border-b {
+    &::before {
+      background: #856e4e;
+      bottom: 30px;
+      content: '';
+      left: 50%;
+      height: 1px;
+      position: absolute;
+      transform: translate(-50%, 0);
+      width: 250px;
+    }
+  }
+  &-img-middle {
+    line-height: 2rem;
+    &>span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.navbar-mdf {
+  background: #000;
+  & a.navbar-brand img {
+    height: 65px;
+  }
+  & .navbar-nav .nav-item>a.nav-link {
+    color: #DAB86A;
+    padding: .5rem 15px;
+  }
+  // other
+  .dpd-lang {
+    &>a.nav-link.dropdown-toggle {
+      color: #FFF;
+    }
+  }
+  & .navbar-nav .dropdown-menu {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0;
+    padding: 10px 15px;
+    top: 63px;
+    & .dropdown-item {
+      color: #DAB86A;
+      background: transparent!important;
+      padding: 5px 15px;
+      &:hover {
+        color: #FFF;
+      }
+    }
+    & .dropdown-item:not(:last-child) {
+      border-bottom: 1px solid #887856;
+    }
+  }
+}
+
+// Footer ===========
+.footer {
+  background: #887856;
+  color: #FFF;
+  padding: 30px;
+  h6 {
+    margin-bottom: 25px;
+  }
+  .download-app-panel {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    .store-panel {
+      width: -webkit-min-content;
+      width: -moz-min-content;
+      width: min-content;
+    }
+  }
+}
+.copy-rights {
+  background: #000;
+  color: #FFF;
+  font-size: .8rem;
+  text-align: center;
+  padding: 25px 0;
+}
+
+// Components =======
+.btn {
+  &-login {
+    background: #DAB86A!important;
+    border-color: #DAB86A!important;
+    color: #221F1F!important;
+    min-width: 100px;
+  }
+
+  &-mdf,
+  &-card {
+    background: #E1B86A!important;
+    border: 0!important;
+    color: #FFF;
+    font-size: 1.2rem!important;
+    min-width: 150px;
+  }
+  &-search {
+    background: #E1B86A!important;
+    border: 0!important;
+    color: #FFF;
+  }
+  &-card {
+    font-size: 1rem!important;
+  }
+}
+
+.card {
+  -webkit-box-shadow: 5px 5px 10px -4px rgba(68, 68, 68, 0.55);
+  box-shadow: 5px 5px 10px -4px rgba(68, 68, 68, 0.55);
+  &-title {
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  &-value {
+    color: #FF0000;
+    font-weight: bold;
+  }
+  &-value-top {
+    border-radius: 3px;
+    position: absolute;
+    top: -13px;
+    background: #FF0000;
+    padding: 3px 15px;
+    min-width: 160px;
+    max-width: 160px;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    &-borrow-point {
+      min-width: 220px;
+    }
+  }
+  &-text {
+    color: #A2A2A2;
+    font-size: .8rem;
+    &-sm {
+      font-size: .6rem;
+    }
+    &>ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+  & a.more-information {
+    background: transparent!important;
+    border: 0!important;
+    border-radius: 0!important;
+    color: #917D62!important;
+    font-size: .8rem!important;
+    padding: 0;
+  }
+
+  &-style-topup {
+    text-align: center;
+    & .card-title,
+    & .card-text {
+      color: #887856;
+    }
+    & .card-text {
+      line-height: 1rem;
+      padding-top: 15px;  
+    }
+    & .btn-topup,
+    & .btn-detail {
+      background: #DAB86A;
+      display: block;
+      width: 100%;
+      padding: 4px 0;
+      border: 0;
+      font-size: .9rem;
+      margin: 0 5px;
+    }
+  }
+
+  // Room Type
+  &-style-roomtype {
+    margin-bottom: 4rem;
+    .roomtype-detail {
+      .roomtype-title {
+        border-bottom: 1px solid #DAB86A;
+        padding-bottom: 10px;
+      }
+      table {
+        font-size: .8rem;
+        tr>td:first-child {
+          position: relative;
+          width: 100px;
+          &::before {
+            content: ':';
+            position: absolute;
+            right: 5px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Dining card
+  &-style-dining {
+    .card-value {
+      margin-bottom: 10px;
+      span {
+        color: #000;
+      }
+    }
+    .card-title {
+      font-size: 1.2rem;
+      margin: 15px;
+      padding-bottom: 15px;
+    }
+    .card-time {
+      color: #000;
+    }
+  }
+}
+
+.table-mdf {
+  max-width: 800px;
+  text-align: center;
+  &>thead {
+    background: #917D62;
+    color: #FFF;
+  }
+}
+
+.jumbotron {
+  background-color: #EAEEED!important;
+  color: #000;
+  &>p {
+    font-size: 2rem;
+  }
+}
+
+.border-x {
+  border: 1px solid #917D62!important;
+}
+
+// Pages ============
+// HomePage
+.how-to-use {
+  text-align: center;
+  img {
+    max-width: 140px;
+    margin-bottom: 15px;
+  }
+  .text-or {
+    position: relative;
+    &::before {
+      content: 'or';
+      position: absolute;
+      left: -10px;
+      top: 25%;
+    }
+  }
+}
+.card-slide {
+  background: #E9E9E9;
+  padding-bottom: 6rem;
+}
+
+// AboutPage
+.about-page {
+  background: #000;
+  color: #FFF;
+  font-size: 1.1rem;
+}
+
+// ListPointPage
+.list-point {
+  &>ul {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+// GuestExperiencePage
+.guest-experience {
+  background: #000;
+  color: #FFF;
+  & h6 {
+    color: #DAB86A;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  & .experience-list {
+    margin-left: 30px;
+    &>li {
+      span {
+        display: inline-block;
+        width: 160px;
+      }
+    }
+  }
+}
+
+// ContactPage
+.contact-page {
+  font-size: 1.3rem;
+}
+
+// ServicePage
+.service-head {
+  padding: 60px 0;
+  .title {
+    padding: 25px 0;
+  }
+  .description {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .input-group {
+    .form-control {
+      border-radius: 5px!important;
+    }
+    .input-group-append {
+      margin-left: 15px;
+      &>.btn {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.service-list-box {
+  background: #E9E9E9;
+  padding: 100px 0;
+}
+.service-detail {
+  &-top {
+    padding: 80px 0;
+    .title {
+      border-bottom: 1px solid #DAB86A;
+      padding: 0 0 25px 0;
+      text-align: left;
+    }
+    .detail {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      &-lg {
+        font-size: 1.6rem;
+        line-height: 3.5rem;
+      }
+      &>span {
+        font-weight: bold;
+        font-size: 1.6rem;    
+      }
+      &-ex {
+        font-size: 1rem;
+        &>span {
+          font-weight: bold;
+          font-size: 1.2rem;    
+        }
+      }
+    }
+    .btn-service {
+      font-size: 1.4rem;
+      width: 100%;
+      background: #dbb964!important;
+      border: 0!important;
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+    }
+    .service-discount {
+      color: #FF0000;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      span {
+        color: #856E50;
+        font-size: 1.2rem;
+      }
+    }
+    .service-time {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+// Other
+.carousel-indicators {
+  bottom: -70px!important;
+
+  li {
+    border-radius: 100%;
+    border: 1px solid #856e4e!important;
+    width: 20px!important;
+    height: 20px!important;
+  }
+  .active {
+    background: #856e4e;
+  }
+}
